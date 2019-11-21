@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="mobile_list_template" name="Mobile List">
+        <div id="wrap" class="container">
+            <h1>Mobiles</h1>
+            <t t-foreach="mobiles" t-as="mobile">
+                <div class="row">
+                    <span t-field="mobile.name" />,
+                    <span t-field="mobile.date_manufacturing"/>,
+                    <span t-field="mobile.price"/>
+                </div>
+            </t>
+        </div>
+    </template>
+
+</odoo>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_mobile_info" model="ir.ui.view">
+        <field name="name">Mobile Info Form</field>
+        <field name="model">mobile.info</field>
+        <field name="arch" type="xml">
+            <form string="mobile">
+                <group name="group_top">
+                    <group name="group_left">
+                        <field name="name"/>
+                        <field name="producer" widget="many2one_tags"/>
+                        <field name="date_manufacturing"/>
+                        <field name="length"/>
+                        <field name="width"/>
+                        <field name="thinkness"/>
+                    </group>
+                    <group name="group_right">
+                        <field name="screen_size"/>
+                        <field name="screen_resolution"/>
+                        <field name="operating_system"/>
+                        <field name="CPU"/>
+                        <field name="RAM"/>
+                        <field name="price"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="tree_mobile_info" model="ir.ui.view">
+        <field name="name">Mobile Info Tree</field>
+        <field name="model">mobile.info</field>
+        <field name="arch" type="xml">
+            <tree string="Mobile">
+                <field name="name"/>
+                <field name="producer" widget="many2one_tags"/>
+                <field name="date_manufacturing"/>
+                <field name="CPU"/>
+                <field name="RAM"/>
+                <field name="price"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>
